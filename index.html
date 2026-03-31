@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Latest Fashion Deals in Kenya – Pay on Delivery or M-Pesa. Fast delivery in Nairobi." />
+  
+  <!-- Favicon & App Icons -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#e8231a" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="TrendKe Fashion – Latest Deals in Kenya" />
+  <meta property="og:description" content="Pay on Delivery or M-Pesa. Fast Nairobi delivery. Limited stock!" />
+  <meta property="og:image" content="https://yoursite.com/og-image.jpg" />
+  <meta property="og:url" content="https://trendke.co.ke" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TrendKe Fashion – Kenya's Best Deals" />
+  <meta name="twitter:image" content="https://yoursite.com/twitter-image.jpg" />
+  
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" 
+        content="default-src 'self'; 
+                 script-src 'self' https://script.google.com https://www.googletagmanager.com; 
+                 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+                 font-src https://fonts.gstatic.com; 
+                 img-src 'self' https: data:; 
+                 connect-src 'self' https://script.google.com https://wa.me https://www.google-analytics.com;">
+  
+  <title>TrendKe Fashion – Kenya's Best Deals</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  
+  <!-- Google Analytics 4 (replace G-XXXXXXXXXX) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { 'send_page_view': true, 'currency': 'KES' });
+  </script>
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "TrendKe Fashion",
+    "image": "https://yoursite.com/logo.png",
+    "telephone": "+254700000000",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nairobi",
+      "addressCountry": "KE"
+    },
+    "priceRange": "KES 650 - KES 3500",
+    "acceptsReservations": "True",
+    "paymentAccepted": "Cash, M-Pesa",
+    "areaServed": "KE"
+  }
+  </script>
+</head>
+<body>
+
+<!-- Skip Link for Accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  STICKY HEADER               ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-icon" aria-hidden="true">👗</span>
+      <span class="logo-text" id="headerBrand">TrendKe Fashion</span>
+    </div>
+    <div class="header-trust">
+      <span class="badge-pill">✅ Pay on Delivery</span>
+      <span class="badge-pill hide-mobile">✅ M-Pesa</span>
+    </div>
+  </div>
+</header>
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  HERO / CAROUSEL             ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<section class="hero" id="hero" aria-label="Featured deals carousel">
+  <!-- Carousel track -->
+  <div class="carousel" id="carousel">
+    <div class="carousel-track" id="carouselTrack" role="region" aria-label="Promotional slides">
+      <!-- Slides injected by JS -->
+    </div>
+    <button class="carousel-btn prev" id="carouselPrev" aria-label="Previous slide" type="button">&#8249;</button>
+    <button class="carousel-btn next" id="carouselNext" aria-label="Next slide" type="button">&#8250;</button>
+    <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Slide navigation"></div>
+  </div>
+
+  <!-- Hero overlay content -->
+  <div class="hero-content">
+    <div class="urgency-ribbon" id="heroTimer" aria-live="polite">
+      ⏰ Offer ends in: <span id="countdown">00:00:00</span>
+    </div>
+    <h1 class="hero-headline">Latest Fashion Deals –<br><em>Pay on Delivery or M-Pesa!</em></h1>
+    <p class="hero-sub">🔥 Limited Stock – Order Today!</p>
+    <div class="hero-ctas">
+      <button class="btn btn-whatsapp" id="heroWhatsapp" type="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.531 5.856L0 24l6.335-1.508A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.001-1.367l-.36-.214-3.732.979.997-3.646-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+        Order via WhatsApp
+      </button>
+      <button class="btn btn-mpesa" id="heroMpesa" type="button">
+        📱 Pay with M-Pesa
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  SOCIAL PROOF STRIP          ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<section class="social-proof" aria-label="Store statistics">
+  <div class="proof-grid">
+    <div class="proof-item">
+      <span class="proof-number" id="ordersCount">2,847+</span>
+      <span class="proof-label">Orders Delivered</span>
+    </div>
+    <div class="proof-item">
+      <span class="proof-number">4.9★</span>
+      <span class="proof-label">Customer Rating</span>
+    </div>
+    <div class="proof-item">
+      <span class="proof-number">🚚 Same-Day</span>
+      <span class="proof-label">Nairobi Delivery</span>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  TRUST BADGES                ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<section class="trust-strip" aria-label="Trust indicators">
+  <div class="trust-grid">
+    <div class="trust-item"><span class="ti" aria-hidden="true">🚚</span><span>Fast Delivery<br><small>Nairobi CBD same-day</small></span></div>
+    <div class="trust-item"><span class="ti" aria-hidden="true">💳</span><span>Pay on Delivery<br><small>Cash at your door</small></span></div>
+    <div class="trust-item"><span class="ti" aria-hidden="true">📲</span><span>M-Pesa Ready<br><small>Till No. accepted</small></span></div>
+    <div class="trust-item"><span class="ti" aria-hidden="true">🔁</span><span>Easy Returns<br><small>7-day guarantee</small></span></div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  UPSELL BANNER               ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<div class="upsell-banner" role="complementary">
+  🛒 <strong>Buy 2 items → Get FREE Delivery!</strong> Buy 3+ → Get <strong>10% OFF</strong> your entire order
+</div>
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  MAIN CONTENT                ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<main id="main-content">
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  PRODUCTS SECTION            ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<section class="products-section" id="products" aria-label="Featured products">
+  <div class="section-header">
+    <h2 class="section-title">🔥 Hot Picks Today</h2>
+    <p class="section-sub">Fresh drops, limited quantities</p>
+  </div>
+  <div class="products-grid" id="productsGrid" role="list">
+    <!-- Product cards injected by JS -->
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  TESTIMONIALS                ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<section class="testimonials-section" aria-label="Customer reviews">
+  <div class="section-header">
+    <h2 class="section-title">💬 What Customers Say</h2>
+  </div>
+  <div class="testimonials-grid" id="testimonialsGrid" role="list">
+    <!-- Injected by JS -->
+  </div>
+</section>
+
+</main>
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  FOOTER                      ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<footer class="site-footer">
+  <p id="footerBrand">TrendKe Fashion</p>
+  <p>📍 Nairobi, Kenya &nbsp;|&nbsp; 📞 <span id="footerPhone">+254 700 000 000</span></p>
+  <p class="footer-trust">✅ Pay on Delivery &nbsp; ✅ M-Pesa Accepted &nbsp; ✅ Fast Delivery</p>
+  <p class="footer-copyright">&copy; <span id="year"></span> TrendKe Fashion. All rights reserved.</p>
+</footer>
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  STICKY MOBILE CTA           ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<div class="sticky-cta" id="stickyCta" role="navigation" aria-label="Quick order actions">
+  <button class="btn btn-whatsapp sticky-wa" id="stickyWa" type="button">
+    💬 Order via WhatsApp
+  </button>
+  <button class="btn btn-mpesa sticky-mp" id="stickyMp" type="button">
+    📱 M-Pesa
+  </button>
+</div>
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  PRODUCT DETAIL MODAL        ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<div class="modal-overlay" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Close dialog" type="button">&#10005;</button>
+    <img class="modal-img" id="modalImg" src="" alt="" loading="lazy" />
+    <div class="modal-body">
+      <h2 class="modal-name" id="modalTitle"></h2>
+      <div class="modal-price-row">
+        <span class="modal-price" id="modalPrice"></span>
+        <span class="modal-stock" id="modalStock"></span>
+      </div>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-delivery">
+        <span>🚚 Nairobi: <strong id="deliveryNbi"></strong></span>
+        <span>🌍 Outside: <strong id="deliveryOut"></strong></span>
+      </div>
+      <button class="btn btn-order modal-order-btn" id="modalOrderBtn" type="button">🛒 Order Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  ORDER FORM MODAL            ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderFormTitle" hidden>
+  <div class="modal-box order-modal-box">
+    <button class="modal-close" id="orderModalClose" aria-label="Close dialog" type="button">&#10005;</button>
+    <h2 class="order-form-title" id="orderFormTitle">📦 Complete Your Order</h2>
+
+    <form id="orderForm" novalidate>
+      <div class="form-group">
+        <label for="fieldName">Full Name *</label>
+        <input type="text" id="fieldName" placeholder="e.g. Amina Wanjiku" required autocomplete="name" />
+        <span class="field-error" id="errName" role="alert"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="fieldPhone">Phone Number * <small>(07XXXXXXXX)</small></label>
+        <input type="tel" id="fieldPhone" placeholder="0712345678" required autocomplete="tel" maxlength="10" pattern="^0[17]\d{8}$" />
+        <span class="field-error" id="errPhone" role="alert"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="fieldLocation">Location *</label>
+        <select id="fieldLocation" required>
+          <option value="">-- Select Location --</option>
+          <option value="Nairobi">Nairobi</option>
+          <option value="Outside Nairobi">Outside Nairobi</option>
+        </select>
+        <span class="field-error" id="errLocation" role="alert"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="fieldProduct">Product</label>
+        <input type="text" id="fieldProduct" readonly class="readonly-field" />
+      </div>
+
+      <div class="form-group">
+        <label for="fieldQty">Quantity *</label>
+        <div class="qty-row">
+          <button type="button" class="qty-btn" id="qtyMinus" aria-label="Decrease quantity">−</button>
+          <input type="number" id="fieldQty" value="1" min="1" max="10" required aria-label="Quantity" />
+          <button type="button" class="qty-btn" id="qtyPlus" aria-label="Increase quantity">+</button>
+        </div>
+      </div>
+
+      <!-- Live total -->
+      <div class="order-summary" id="orderSummary" aria-live="polite">
+        <div class="summary-row"><span>Subtotal</span><span id="summSubtotal">KES 0</span></div>
+        <div class="summary-row"><span>Delivery</span><span id="summDelivery">—</span></div>
+        <div class="summary-row total-row"><span>Total</span><span id="summTotal">KES 0</span></div>
+      </div>
+
+      <button type="submit" class="btn btn-order btn-submit" id="submitBtn">
+        <span id="submitLabel">Confirm Order &amp; Go to WhatsApp 💬</span>
+        <span class="spinner" id="spinner" hidden aria-hidden="true"></span>
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  M-PESA MODAL                ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<div class="modal-overlay" id="mpesaModal" role="dialog" aria-modal="true" aria-labelledby="mpesaTitle" hidden>
+  <div class="modal-box mpesa-box">
+    <button class="modal-close" id="mpesaClose" aria-label="Close dialog" type="button">&#10005;</button>
+    <div class="mpesa-logo" id="mpesaTitle">📲 M-Pesa Payment</div>
+    <ol class="mpesa-steps" id="mpesaSteps">
+      <li>Go to M-Pesa on your phone</li>
+      <li>Select <strong>Lipa na M-Pesa</strong></li>
+      <li>Select <strong>Buy Goods &amp; Services</strong></li>
+      <li>Enter Till Number: <strong id="mpesaTill" class="accent">XXXXXX</strong></li>
+      <li>Enter Amount: <strong id="mpesaAmount" class="accent">KES —</strong></li>
+      <li>Use your <strong>Full Name</strong> as reference</li>
+      <li>Enter M-Pesa PIN &amp; send</li>
+    </ol>
+    <p class="mpesa-confirm-text">After payment, confirm your order via WhatsApp 👇</p>
+    <button class="btn btn-whatsapp" id="mpesaWhatsapp" type="button">Confirm via WhatsApp 💬</button>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  SUCCESS TOAST               ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+<!-- Scripts -->
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
